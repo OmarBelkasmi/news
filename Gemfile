@@ -1,6 +1,17 @@
 source 'https://rubygems.org'
 
 
+gem 'capistrano', '~> 2.15'
+
+platforms :ruby do # linux
+  gem 'unicorn'
+end
+
+platforms :mswin do
+  # gems specific to windows
+end
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
